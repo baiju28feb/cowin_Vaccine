@@ -65,7 +65,7 @@ while True:
                 else:
                     print('No response received!')
     if counter == 0:
-        print('No vaccination slot is available')
+        print('No vaccination slot is available', datetime.now())
 
     else:
         print('Finished Search!')
