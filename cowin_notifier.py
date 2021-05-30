@@ -1,6 +1,9 @@
 import requests
 import json
 
+from datetime import datetime
+import pytz
+
 import time
 from datetime import datetime, timedelta
 
@@ -10,7 +13,7 @@ age = 52
 pincodes = ["678505"]
 print_flag = 'Y'
 num_days = 2
-
+IST = pytz.timezone('Asia/Kolkata')
 actual = datetime.today()
 #print(actual)
 
@@ -65,7 +68,7 @@ while True:
                 else:
                     print('No response received!')
     if counter == 0:
-        print('No vaccination slot is available', datetime.now())
+        print('No vaccination slot is available', datetime.now(IST))
 
     else:
         print('Finished Search!')
